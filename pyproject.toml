@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "chatbot-cab-lex"
+version = "0.1.0"
+description = ""
+authors = ["Andres Quintero <aquintero446@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8.17"
+pydantic = "^2.3.0"
+aws-lambda-env-modeler = "^1.0.3"
+pydantic-extra-types = "^2.1.0"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^6.1.0"
+nox = "^2023.4.22"
+black = "^23.7.0"
+flake8-black = "^0.3.6"
+aws-lambda-powertools = {extras = ["aws-sdk"], version = "^2.23.1"}
+isort = "^5.12.0"
+
+
+[tool.poetry.group.mapsapi.dependencies]
+googlemaps = "^4.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

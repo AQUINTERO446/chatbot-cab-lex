@@ -1,0 +1,15 @@
+{
+  "name": "chatbot-cab-lex",
+  "version": "1.0.0",
+  "description": "### Deployment",
+  "scripts": {
+    "dev": "poetry install && poetry install --with mapsapi",
+    "build_global": "poetry export --only main -f requirements.txt > requirements.txt --without-hashes",
+    "build_mapsapi": "poetry export --only mapsapi -f requirements.txt > lambdas/mapsapi/requirements.txt --without-hashes"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serverless-layers": "^2.6.1"
+  }
+}

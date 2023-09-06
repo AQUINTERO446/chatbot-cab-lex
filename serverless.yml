@@ -2,10 +2,32 @@ service: chatbot-cab-lex
 
 frameworkVersion: '3'
 
+plugins:
+  - serverless-layers
+
 provider:
   name: aws
-  runtime: python3.9
+  runtime: python3.8
+
+custom:
+  serverless-layers:
+    # applies for all lambdas 
+    - common:
+        dependenciesPath: ./service/
+    # apply for maps_validate only
+    - maps_validate:
+        functions:
+          - maps_validate
+        dependenciesPath: lambdas/mapsapi/requirements.txt
+    - staticArn:
+        functions:
+          - maps_validate
+          - cab_interface
+        arn: arn:aws:lambda:us-east-1:017000801446:layer:AWSLambdaPowertoolsPythonV2:42
+
 
 functions:
-  hello:
-    handler: handler.hello
+  maps_validate:
+    handler: lambdas/mapsapi/validate.simple_addressvalidation_handler
+  cab_interface:
+    handler: lambdas/cab_interface/interface.cab_request
