@@ -30,13 +30,13 @@ test = ["coverage", "mypy", "pexpect", "ruff", "wheel"]
 
 [[package]]
 name = "aws-lambda-env-modeler"
-version = "1.0.3"
+version = "1.0.5"
 description = "AWS-Lambda-Env-Modeler is a Python library designed to simplify the process of managing and validating environment variables in your AWS Lambda functions."
 optional = false
 python-versions = ">=3.8.17,<4.0.0"
 files = [
-    {file = "aws_lambda_env_modeler-1.0.3-py3-none-any.whl", hash = "sha256:05eff05e0e5199ef0e6d0a73d41762f4d3b2d7ca5ef9f70cee65025ba3998590"},
-    {file = "aws_lambda_env_modeler-1.0.3.tar.gz", hash = "sha256:dac1850c3686da105e25707cd87382dc3ffa7f7729181070f786c74fe5eb5fb6"},
+    {file = "aws_lambda_env_modeler-1.0.5-py3-none-any.whl", hash = "sha256:153e60a9274b27a2174275fa5a35a4b65a0d576019ea81de571d52320b1d78d2"},
+    {file = "aws_lambda_env_modeler-1.0.5.tar.gz", hash = "sha256:bf3bf5d8d2b0ec8876f513813145d1673df6cfdab551ef5b48766592be2ea71c"},
 ]
 
 [package.dependencies]
@@ -781,4 +781,4 @@ test = ["covdefaults (>=2.3)", "coverage (>=7.2.7)", "coverage-enable-subprocess
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.8.17"
-content-hash = "0a6fdf10895359d354ad7fd08530e802bc1976040515debf4c46500c636f2a53"
+content-hash = "4c083e3d37a2be916dbd7d5f1ef9708d1fb309eaf11f29b655f5cc124b403d43"
