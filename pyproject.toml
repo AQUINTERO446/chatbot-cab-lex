@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8.17"
-pydantic = "^2.3.0"
+pydantic = "^2.5.2"
 aws-lambda-env-modeler = "^1.0.3"
 pydantic-extra-types = "^2.1.0"
 
